@@ -1,17 +1,16 @@
-import { useConvertSpeechToText } from "../hooks/use-convert-speech-to-text";
-import { AudioRecorder } from "./audio-recorder";
+import { useSpeechToText } from "../hooks/use-speech-to-text";
 
 export const SpeechToText = () => {
-  const { convertSpeechToText, transcribeText, error } =
-    useConvertSpeechToText();
+  const { startRecording, stopRecording, transcribeText, isLoading, error } =
+    useSpeechToText();
+
   return (
-    <div className="Text">
-      <div>
-        <h3>Speech to text</h3>
-        <AudioRecorder finishRecording={convertSpeechToText} />
-        <p>{transcribeText}</p>
-        <p>{error}</p>
-      </div>
-    </div>
+    <>
+      <button onClick={isLoading ? stopRecording : startRecording}>
+        {isLoading ? "Stop" : "Start"} recording
+      </button>
+      <textarea value={transcribeText} rows={8} cols={32} readOnly />
+      {error && <p>{error}</p>}
+    </>
   );
 };

@@ -71,13 +71,9 @@ export const AudioRecorder = ({ finishRecording }: Props) => {
   }
 
   return (
-    <div className="audioRecorder">
-      <div>
-        {recording && <button onClick={stopRecording}>Stop recording</button>}
-        {!recording && (
-          <button onClick={startRecording}>Start recording</button>
-        )}
-      </div>
-    </div>
+    <>
+      {recording && <button onClick={stopRecording}>Stop recording</button>}
+      {!recording && <button onClick={startRecording}>Start recording</button>}
+    </>
   );
 };
