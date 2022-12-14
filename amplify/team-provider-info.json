@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-speechtotext-dev-141358-authRole",
+      "UnauthRoleArn": "arn:aws:iam::234761915272:role/amplify-speechtotext-dev-141358-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::234761915272:role/amplify-speechtotext-dev-141358-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-speechtotext-dev-141358-deployment",
+      "UnauthRoleName": "amplify-speechtotext-dev-141358-unauthRole",
+      "StackName": "amplify-speechtotext-dev-141358",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:234761915272:stack/amplify-speechtotext-dev-141358/1e0cae80-7b6e-11ed-8b74-0adacad0f909",
+      "AmplifyAppId": "d14hgcp3yyzqft"
+    },
+    "categories": {
+      "auth": {
+        "speechtotextf5989e94": {}
+      },
+      "predictions": {
+        "transcriptionf0e6b2ad": {}
+      }
+    }
+  }
+}
