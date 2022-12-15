@@ -2,9 +2,9 @@ import MicrophoneStream from "microphone-stream";
 import { useState } from "react";
 import { useConvertSpeechToText } from "./use-convert-speech-to-text";
 
-export const useSpeechToText = () => {
+export const useSpeechToText = (sourceLanguageCode: string) => {
   const { convertSpeechToText, transcribeText, error } =
-    useConvertSpeechToText();
+    useConvertSpeechToText(sourceLanguageCode);
   const [isLoading, setIsLoading] = useState(false);
   const [micStream, setMicStream] = useState<MicrophoneStream | null>(null);
   const [audioBuffer] = useState(

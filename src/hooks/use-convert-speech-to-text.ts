@@ -2,7 +2,7 @@ import { SpeechToTextOutput } from "@aws-amplify/predictions";
 import { Predictions } from "aws-amplify";
 import { useState } from "react";
 
-export const useConvertSpeechToText = () => {
+export const useConvertSpeechToText = (sourceLanguageCode: string) => {
   const [transcribeText, setTranscribeText] = useState("");
   const [error, setError] = useState("");
 
@@ -16,8 +16,7 @@ export const useConvertSpeechToText = () => {
         const result: SpeechToTextOutput = await Predictions.convert({
           transcription: {
             source: { bytes },
-            // language: "en-US",
-            language: "ja-JP",
+            language: sourceLanguageCode,
           },
         });
         console.log("audio2text", result.transcription.fullText);

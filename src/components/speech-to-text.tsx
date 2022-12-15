@@ -1,8 +1,12 @@
 import { useSpeechToText } from "../hooks/use-speech-to-text";
 
-export const SpeechToText = () => {
+type Props = {
+  sourceLanguageCode: string;
+};
+
+export const SpeechToText = ({ sourceLanguageCode }: Props) => {
   const { startRecording, stopRecording, transcribeText, isLoading, error } =
-    useSpeechToText();
+    useSpeechToText(sourceLanguageCode);
 
   return (
     <>

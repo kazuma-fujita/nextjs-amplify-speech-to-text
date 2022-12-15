@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { SpeechToText } from "../src/components/speech-to-text";
+import { SpeechToTextForm } from "../src/components/speech-to-text-form";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -13,12 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Transcribe it!</h1>
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <SpeechToText />
-          </div>
-        </div>
+        <SpeechToTextForm />
       </main>
 
       <footer className={styles.footer}>Powered by ZUMA</footer>
